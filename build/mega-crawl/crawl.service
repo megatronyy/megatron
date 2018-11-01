@@ -1,0 +1,14 @@
+[Unit]
+Description=quwebnin's crawl service
+After=network.target
+
+
+[Service]
+Type=forking
+ExecStart=/home/crawl/start.sh -start
+ExecReload=/home/crawl/start.sh -restart
+ExecStop=/home/crawl/start.sh -stop
+PrivateTmp=True
+
+[Install]
+WantedBy=multi-user.target
