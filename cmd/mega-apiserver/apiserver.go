@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/twfx7758/megatron/cmd/mega-apiserver/app"
-	"github.com/twfx7758/megatron/pkg/mega-apiserver/server"
 	"fmt"
 	"os"
+
+	"github.com/twfx7758/megatron/cmd/mega-apiserver/app"
+	"github.com/twfx7758/megatron/pkg/mega-apiserver/server"
 )
 
 func main() {

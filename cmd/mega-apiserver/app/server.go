@@ -7,8 +7,12 @@ func NewAPIServerCommand(stopCh <-chan struct{}) *cobra.Command {
 		Use:  "mega-apiserver",
 		Long: "对外api",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			return nil
+			return run()
 		},
 	}
 	return cmd
+}
+
+func run() error {
+	return nil
 }
