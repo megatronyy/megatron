@@ -10,6 +10,7 @@ func NewAPIServerCommand(stopCh <-chan struct{}) *cobra.Command {
 			return run()
 		},
 	}
+
 	return cmd
 }
 
