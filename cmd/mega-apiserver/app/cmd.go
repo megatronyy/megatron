@@ -2,7 +2,6 @@ package app
 
 import (
 	"github.com/spf13/cobra"
-	"fmt"
 )
 
 func NewAPIServerCommand(stopCh <-chan struct{}) *cobra.Command {
@@ -23,8 +22,6 @@ func run(stopCh <-chan struct{}) {
 
 	router := NewRouter(host, port)
 	router.Start()
-
-	fmt.Printf("mega-apiserver run at %s:%d", host, port)
 
 	<-stopCh
 }
