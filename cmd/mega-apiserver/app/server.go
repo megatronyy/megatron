@@ -1,6 +1,9 @@
 package app
 
-import "github.com/emicklei/go-restful"
+import (
+	"github.com/emicklei/go-restful"
+	"github.com/twfx7758/megatron/cmd/mega-apiserver/app/routers"
+)
 
 type Router struct {
 	host string
@@ -18,4 +21,6 @@ func (r *Router) Start() {
 	container := restful.NewContainer()
 	container.Router(restful.CurlyRouter{})
 
+	user := new(routers.UserController)
+	user.Register(container)
 }
