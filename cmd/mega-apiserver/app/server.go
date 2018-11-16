@@ -1,19 +1,21 @@
 package app
 
-import "github.com/spf13/cobra"
+import "github.com/emicklei/go-restful"
 
-func NewAPIServerCommand(stopCh <-chan struct{}) *cobra.Command {
-	cmd := &cobra.Command{
-		Use:  "mega-apiserver",
-		Long: "对外api",
-		RunE: func(cmd *cobra.Command, args []string) error {
-			return run()
-		},
-	}
-
-	return cmd
+type Router struct {
+	host string
+	port int
 }
 
-func run() error {
-	return nil
+func NewRouter(host string, port int) *Router {
+	return &Router{
+		host: host,
+		port: port,
+	}
+}
+
+func (r *Router) Start() {
+	container := restful.NewContainer()
+	container.Router(restful.CurlyRouter{})
+
 }
