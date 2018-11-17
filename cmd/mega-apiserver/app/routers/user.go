@@ -1,18 +1,22 @@
 package routers
 
 import (
-	"github.com/emicklei/go-restful"
 	"net/http"
+
+	"github.com/emicklei/go-restful"
 )
 
+//User 用户model类型
 type User struct {
 	Name   string
 	Mobile string
 }
 
+//UserController 用户restapi
 type UserController struct {
 }
 
+//Register 注册用户的路由
 func (u *UserController) Register(container *restful.Container) {
 	ws := new(restful.WebService)
 	ws.
