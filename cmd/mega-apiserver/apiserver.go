@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"os"
 
+	"time"
+
 	"github.com/twfx7758/megatron/cmd/mega-apiserver/app"
 	"github.com/twfx7758/megatron/pkg/mega-apiserver/server"
-	"time"
 	"k8s.io/extension/apimachinery/pkg/util/rand"
 )
 
