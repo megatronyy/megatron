@@ -1,1 +1,1 @@
-# Megatron [![GitHub release]]
+# Megatron
