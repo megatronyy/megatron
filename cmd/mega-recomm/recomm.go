@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	conn = "root:qu90()op@tcp(192.168.0.106:3306)/pholcus?charset=utf8"
+	conn = "root:QU90()op@tcp(192.168.0.106:3306)/pholcus?charset=utf8"
 )
 
 func main() {
