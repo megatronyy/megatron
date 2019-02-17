@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-var (
+const (
 	conn = "root:QU90()op@tcp(192.168.0.106:3306)/pholcus?charset=utf8"
 )
 
