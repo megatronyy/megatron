@@ -2,6 +2,10 @@ FROM centos
 
 MAINTAINER quwenbin
 
-COPY mega-crawl /opt/crawl
+COPY mega-crawl /opt/crawl/
 
-ENTRYPOINT[ "/opt/crawl/mega-crawl" ]
+ENV HOME /opt/crawl
+WORKDIR ${HOME}
+RUN chmod +x mega-crawl
+
+ENTRYPOINT[ "mega-crawl" ]

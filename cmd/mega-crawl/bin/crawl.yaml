@@ -1,0 +1,23 @@
+# Copyright 2019 mega Authors
+
+##################################################################################################
+# mega-crawl service
+##################################################################################################
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: crawl-v1
+  namespace: mega
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: crawl
+        version: v1
+    spec:
+      containers:
+      - name: crawl
+        image: mega/crawl
+        imagePullPolicy: IfNotPresent
