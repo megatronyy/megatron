@@ -1,10 +1,8 @@
+#!/usr/bin/env python3
+
 """
 python处理文本文件数据
 """
-
-#! /usr/bin/python3
-#
-
 import linecache
 import sys
 
