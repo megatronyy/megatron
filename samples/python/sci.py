@@ -7,7 +7,5 @@ def city():
     y = np.sin(x)
     plt.plot(x, y)
 
-
-
 if __name__ == "__main__":
     city()
