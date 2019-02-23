@@ -27,9 +27,10 @@ def boxplot():
     plt.show()
 
 
+# 小提琴图
 def violin():
-    sns.violinplot(df['Age'], df['Gender'])
-    sns.despine()
+    sns.violinplot(df['Age'], df['Gender'], data=df)
+    # sns.despine()
 
 
 if __name__ == "__main__":
