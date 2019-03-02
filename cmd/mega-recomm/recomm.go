@@ -1,23 +1,16 @@
 package main
 
-import "github.com/go-xorm/xorm"
 import (
-	_ "github.com/go-sql-driver/mysql"
 	"fmt"
-)
-
-const (
-	conn = "root:QU90()op@tcp(192.168.0.106:3306)/pholcus?charset=utf8"
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/twfx7758/megatron/cmd/mega-recomm/sqlcommon"
 )
 
 func main() {
-	engine, err := xorm.NewEngine("mysql", conn)
-	if err != nil {
-		panic(err)
-	}
-	defer engine.Close()
+	config := sqlcommon.NewConfig()
+	defer config.Engine.Close()
 
-	results, err := engine.Query("SELECT * FROM business__house_detail ORDER BY 1 DESC LIMIT 10")
+	results, err := config.Engine.Query(sqlcommon.Detail)
 	if err != nil {
 		panic(err)
 	}

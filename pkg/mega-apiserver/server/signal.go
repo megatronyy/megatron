@@ -1,8 +1,8 @@
 package server
 
 import (
-	"os/signal"
 	"os"
+	"os/signal"
 )
 
 var onlyOneSignalHandler = make(chan struct{})

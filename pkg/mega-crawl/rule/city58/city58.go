@@ -1,10 +1,10 @@
 package rule
 
 import (
-	. "github.com/henrylee2cn/pholcus/app/spider"
 	"github.com/henrylee2cn/pholcus/app/downloader/request"
-	"strconv"
+	. "github.com/henrylee2cn/pholcus/app/spider"
 	"github.com/henrylee2cn/pholcus/common/goquery"
+	"strconv"
 	"strings"
 )
 
