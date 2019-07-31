@@ -1,8 +1,8 @@
 package rule
 
 import (
-	"strings"
 	"github.com/henrylee2cn/pholcus/common/goquery"
+	"strings"
 )
 
 /**获取标题**/
